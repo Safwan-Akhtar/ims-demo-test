@@ -4,7 +4,7 @@ public class Item {
 	
 	private Long productid;
 	private String productname;
-	private double price;
+	private Double price;
 	
 	public Item(String name, Double price) {
 		this.productname = name;
