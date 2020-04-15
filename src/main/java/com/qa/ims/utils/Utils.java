@@ -13,5 +13,9 @@ public class Utils {
 		Scanner scanner = new Scanner(System.in);
 		return scanner.nextLine();
 	}
-
+	
+	public static Double getPrice() {
+		return Double.valueOf(getInput());
+	}
+	// int.parse int
 }
