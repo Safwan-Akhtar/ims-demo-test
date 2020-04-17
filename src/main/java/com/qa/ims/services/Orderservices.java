@@ -5,11 +5,11 @@ import java.util.List;
 import com.qa.ims.persistence.dao.Dao;
 import com.qa.ims.persistence.domain.Order;
 
-public class OrderServices implements CrudServices<Order> {
+public class Orderservices implements CrudServices<Order> {
 
 	private Dao<Order> orderDao;
 	
-	public OrderServices(Dao<Order> orderDao) {
+	public Orderservices(Dao<Order> orderDao) {
 		this.orderDao = orderDao;
 	}
 	
