@@ -13,9 +13,12 @@ import org.apache.log4j.Logger;
 import com.qa.ims.controller.Action;
 import com.qa.ims.controller.CrudController;
 import com.qa.ims.controller.CustomerController;
+import com.qa.ims.controller.ItemController;
 import com.qa.ims.persistence.dao.CustomerDaoMysql;
+import com.qa.ims.persistence.dao.ItemDaoMysql;
 import com.qa.ims.persistence.domain.Domain;
 import com.qa.ims.services.CustomerServices;
+import com.qa.ims.services.Itemservices;
 import com.qa.ims.utils.Utils;
 
 public class Ims {
@@ -29,7 +32,7 @@ public class Ims {
 		String password = Utils.getInput();
 
 		init(username, password);
-
+//add while loop for login
 		LOGGER.info("Which entity would you like to use?");
 		Domain.printDomains();
 
@@ -46,6 +49,9 @@ public class Ims {
 			doAction(customerController, action);
 			break;
 		case ITEM:
+			ItemController itemController = new ItemController(
+					new Itemservices(new ItemDaoMysql(username, password)));
+			doAction(itemController, action);
 			break;
 		case ORDER:
 			break;
@@ -86,7 +92,7 @@ public class Ims {
 	 * @param password
 	 */
 	public void init(String username, String password) {
-		init("jdbc:mysql://35.246.93.243:3306/", username, password, "src/main/resources/sql-schema.sql");
+		init("jdbc:mysql://104.155.21.66:3306/", username, password, "src/main/resources/sql-schema.sql");
 	}
 
 	public String readFile(String fileLocation) {

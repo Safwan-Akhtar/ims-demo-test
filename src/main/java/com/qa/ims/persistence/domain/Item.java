@@ -77,4 +77,8 @@ public class Item {
 		return true;
 	}
 	
+	public String toString() {
+		return "id:" + productid + " Product name:" + productname + " Product price:" + price;
+	}
+	
 }

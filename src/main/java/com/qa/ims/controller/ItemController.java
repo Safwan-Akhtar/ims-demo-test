@@ -22,9 +22,6 @@ public class ItemController implements CrudController<Item>{
 		return Utils.getInput();
 	}
 	
-	Double getPrice() {
-		return Utils.getPrice();
-	}
 
 	@Override
 	public List<Item> readAll() {
@@ -40,7 +37,7 @@ public class ItemController implements CrudController<Item>{
 		LOGGER.info("Please enter product name");
 		String productName = getInput();
 		LOGGER.info("Please enter a price");
-		Double price = getPrice();
+		Double price = Double.valueOf(getInput());
 		Item item = itemService.create(new Item(productName, price));
 		LOGGER.info("Product created");
 		return item;
@@ -52,12 +49,13 @@ public class ItemController implements CrudController<Item>{
 		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter prduct name");
 		String productName = getInput();
-		LOGGER.info("Please enter a surname");
-		Double price = getPrice();
+		LOGGER.info("Please enter a price");
+		Double price = Double.valueOf(getInput());
 		Item item = itemService.update(new Item(id, productName, price));
-		LOGGER.info("Customer Updated");
+		LOGGER.info("Item Updated");
 		return item;
 	}
+	
 	@Override
 	public void delete() {
 		LOGGER.info("Please enter the id of the product you would like to delete");
