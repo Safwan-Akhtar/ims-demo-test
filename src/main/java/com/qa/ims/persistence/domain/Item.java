@@ -2,35 +2,35 @@ package com.qa.ims.persistence.domain;
 
 public class Item {
 	
-	private Long productid;
-	private String productname;
+	private Long product_id;
+	private String product_name;
 	private Double price;
 	
 	public Item(String name, Double price) {
-		this.productname = name;
+		this.product_name = name;
 		this.price = price;	
 	}
 	
 	public Item(Long id, String name, Double price) {
-		this.productid = id;
-		this.productname = name;
+		this.product_id = id;
+		this.product_name = name;
 		this.price = price;
 	}
 
 	public Long getId() {
-		return productid;
+		return product_id;
 	}
 
 	public void setId(Long id) {
-		this.productid = id;
+		this.product_id = id;
 	}
 
 	public String getName() {
-		return productname;
+		return product_name;
 	}
 
 	public void setName(String name) {
-		this.productname = name;
+		this.product_name = name;
 	}
 
 	public double getPrice() {
@@ -45,8 +45,8 @@ public class Item {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((productid == null) ? 0 : productid.hashCode());
-		result = prime * result + ((productname == null) ? 0 : productname.hashCode());
+		result = prime * result + ((product_id == null) ? 0 : product_id.hashCode());
+		result = prime * result + ((product_name == null) ? 0 : product_name.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -62,15 +62,15 @@ public class Item {
 		if (getClass() != obj.getClass())
 			return false;
 		Item other = (Item) obj;
-		if (productid == null) {
-			if (other.productid != null)
+		if (product_id == null) {
+			if (other.product_id != null)
 				return false;
-		} else if (!productid.equals(other.productid))
+		} else if (!product_id.equals(other.product_id))
 			return false;
-		if (productname == null) {
-			if (other.productname != null)
+		if (product_name == null) {
+			if (other.product_name != null)
 				return false;
-		} else if (!productname.equals(other.productname))
+		} else if (!product_name.equals(other.product_name))
 			return false;
 		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
 			return false;
@@ -78,7 +78,7 @@ public class Item {
 	}
 	
 	public String toString() {
-		return "id:" + productid + " Product name:" + productname + " Product price:" + price;
+		return "id:" + product_id + " Product name:" + product_name + " Product price:" + price;
 	}
 	
 }
