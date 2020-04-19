@@ -50,7 +50,7 @@ public class ItemTest {
 	public void createItemWithId() {
 		assertEquals(1L, item.getId(), 0);
 		assertEquals("FF7R", item.getName());
-//		assertEquals(40.00, item.getPrice());
+		assertEquals(40.00, item.getPrice(), 0);
 	}
 	
 	@Test

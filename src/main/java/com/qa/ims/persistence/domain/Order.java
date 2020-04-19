@@ -78,7 +78,7 @@ public class Order {
 	}
 	
 	public String toString() {
-		return "id:" + order_id + " first name:" + cust_id + " surname:" + totalPrice;
+		return "order_id:" + order_id + " cust_id:" + cust_id + " totalPrice:" + totalPrice;
 	}
 	
 }
