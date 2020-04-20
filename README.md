@@ -1,4 +1,7 @@
 Coverage: 40.7%
+
+[Presentation](https://docs.google.com/presentation/d/19g1eDCpMNgJxQD44HteBGX5vC1lupW3JJ7DkTOrntrk/edit?usp=sharing)
+
 # QA Project - Invetory Management System.
 
 The projects goal is to build an Invetory Management System for a game store using the CRUD database methods, allowing end users to CREATE, READ, UPDATE and DELETE records from a database.
