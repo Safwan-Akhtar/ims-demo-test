@@ -4,17 +4,17 @@ public class Item {
 	
 	private Long product_id;
 	private String product_name;
-	private Double price;
+	private Double product_price;
 	
 	public Item(String name, Double price) {
 		this.product_name = name;
-		this.price = price;	
+		this.product_price = price;	
 	}
 	
 	public Item(Long id, String name, Double price) {
 		this.product_id = id;
 		this.product_name = name;
-		this.price = price;
+		this.product_price = price;
 	}
 
 	public Long getId() {
@@ -34,11 +34,11 @@ public class Item {
 	}
 
 	public double getPrice() {
-		return price;
+		return product_price;
 	}
 
 	public void setPrice(Double price) {
-		this.price = price;
+		this.product_price = price;
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class Item {
 		result = prime * result + ((product_id == null) ? 0 : product_id.hashCode());
 		result = prime * result + ((product_name == null) ? 0 : product_name.hashCode());
 		long temp;
-		temp = Double.doubleToLongBits(price);
+		temp = Double.doubleToLongBits(product_price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
@@ -72,13 +72,13 @@ public class Item {
 				return false;
 		} else if (!product_name.equals(other.product_name))
 			return false;
-		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
+		if (Double.doubleToLongBits(product_price) != Double.doubleToLongBits(other.product_price))
 			return false;
 		return true;
 	}
 	
 	public String toString() {
-		return "id:" + product_id + " Product name:" + product_name + " Product price:" + price;
+		return "id:" + product_id + " Product name:" + product_name + " Product price:" + product_price;
 	}
 	
 }

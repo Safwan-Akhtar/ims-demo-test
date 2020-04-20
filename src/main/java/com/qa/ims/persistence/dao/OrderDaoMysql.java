@@ -21,7 +21,7 @@ public class OrderDaoMysql implements Dao<Order> {
 	private String password;
 
 	public OrderDaoMysql(String username, String password) {
-		this.jdbcConnectionUrl = "jdbc:mysql:/104.155.21.66:3306/ims";
+		this.jdbcConnectionUrl = "jdbc:mysql://104.155.21.66:3306/ims";
 		this.username = username;
 		this.password = password;
 	}
@@ -33,9 +33,9 @@ public class OrderDaoMysql implements Dao<Order> {
 	}
 
 	Order orderFromResultSet(ResultSet resultSet) throws SQLException {
-		Long order_id = resultSet.getLong("Order_id");
-		Long cust_id = resultSet.getLong("Customer_id");
-		Double totalPrice = resultSet.getDouble("Tottal_Price");
+		Long order_id = resultSet.getLong("order_id");
+		Long cust_id = resultSet.getLong("cust_id");
+		Double totalPrice = resultSet.getDouble("total_Price");
 		return new Order(order_id, cust_id, totalPrice);
 	}
 
@@ -72,7 +72,7 @@ public class OrderDaoMysql implements Dao<Order> {
 	public Order create(Order order) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into orders(Order_id, Customer_id, Tottal_Price) values('" + order.getOrder_id()
+			statement.executeUpdate("insert into orders(order_id, cust_id, total_Price) values('" + order.getOrder_id()
 					+ "','" + order.getCust_id() + "','" + order.getTotalPrice() + "')");
 			return readLatest();
 		} catch (Exception e) {
@@ -85,7 +85,7 @@ public class OrderDaoMysql implements Dao<Order> {
 	public Order readOrder(Long order_id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT FROM orders where Order_id = " + order_id);) {
+				ResultSet resultSet = statement.executeQuery("SELECT FROM orders where order_id = " + order_id);) {
 			resultSet.next();
 			return orderFromResultSet(resultSet);
 		} catch (Exception e) {
@@ -99,8 +99,8 @@ public class OrderDaoMysql implements Dao<Order> {
 	public Order update(Order order) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("update orders set Order_id ='" + order.getOrder_id() + "', Custoemr_id ='"
-					+ order.getCust_id() + "' where Tottal_Price =" + order.getTotalPrice());
+			statement.executeUpdate("update orders set order_id ='" + order.getOrder_id() + "', cust_id ='"
+					+ order.getCust_id() + "' where total_Price =" + order.getTotalPrice());
 			return readOrder(order.getOrder_id());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -113,7 +113,7 @@ public class OrderDaoMysql implements Dao<Order> {
 	public void delete(long order_id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from orders where Order_id = " + order_id);
+			statement.executeUpdate("delete from orders where order_id = " + order_id);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());

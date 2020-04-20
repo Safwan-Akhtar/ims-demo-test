@@ -21,7 +21,7 @@ public class OrderLineDaoMysql implements Dao<OrderLine> {
 	private String password;
 	
 	public OrderLineDaoMysql(String username, String password) {
-		this.jdbcConnectionUrl = "jdbc:mysql:/104.155.21.66:3306/ims";
+		this.jdbcConnectionUrl = "jdbc:mysql://104.155.21.66:3306/ims";
 		this.username = username;
 		this.password = password;
 	}
