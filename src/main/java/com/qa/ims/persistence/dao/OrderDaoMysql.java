@@ -14,7 +14,7 @@ import com.qa.ims.persistence.domain.Order;
 
 public class OrderDaoMysql implements Dao<Order> {
 	
-	public static final Logger LOGGER = Logger.getLogger(CustomerDaoMysql.class);
+	public static final Logger LOGGER = Logger.getLogger(OrderDaoMysql.class);
 
 	private String jdbcConnectionUrl;
 	private String username;
@@ -85,7 +85,7 @@ public class OrderDaoMysql implements Dao<Order> {
 	public Order readOrder(Long order_id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where Order_id = " + order_id);) {
+				ResultSet resultSet = statement.executeQuery("SELECT FROM orders where Order_id = " + order_id);) {
 			resultSet.next();
 			return orderFromResultSet(resultSet);
 		} catch (Exception e) {

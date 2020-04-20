@@ -86,7 +86,7 @@ public class OrderLineDaoMysql implements Dao<OrderLine> {
 	public OrderLine readOrderLine(Long id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM OrderLine where id = " + id);) {
+				ResultSet resultSet = statement.executeQuery("SELECT FROM OrderLine where id = " + id);) {
 			resultSet.next();
 			return OrderLineFromResultSet(resultSet);
 		} catch (Exception e) {
