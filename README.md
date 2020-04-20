@@ -1,6 +1,6 @@
 Coverage: 40.7%
 
-[Presentation](https://docs.google.com/presentation/d/19g1eDCpMNgJxQD44HteBGX5vC1lupW3JJ7DkTOrntrk/edit?usp=sharing)
+[Presentation](https://docs.google.com/presentation/d/1hSd8JGVdHJqWiLzfQs0i03INd2eExHM1ar0thv16ecI/edit?usp=sharing)
 
 # QA Project - Invetory Management System.
 
