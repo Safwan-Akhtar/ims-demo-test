@@ -76,7 +76,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Safwan Akhtar** - [Safwan-QA]https://github.com/Safwan-Akhtar - 
+* **Safwan Akhtar** - [Safwan-QA](https://github.com/Safwan-Akhtar) - 
 
 ## License
 
@@ -86,9 +86,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-Chris Perrins - Provided a basis for the project - [christophperrins](https://github.com/christophperrins)
-Nicholas Johnson - Provided constant advice and help with syntax errors and code issues - https://github.com/nickrstewarttds
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+[Chris Perrins](https://github.com/christophperrins) - Provided a basis for the project
+[Nicholas Johnsonh](https://github.com/nickrstewarttds) - Provided constant advice and help with syntax errors and code issues
+
 # ims-demo-test
