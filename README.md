@@ -87,6 +87,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 [Chris Perrins](https://github.com/christophperrins) - Provided a basis for the project
+
 [Nicholas Johnsonh](https://github.com/nickrstewarttds) - Provided constant advice and help with syntax errors and code issues
 
 # ims-demo-test
