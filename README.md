@@ -1,11 +1,13 @@
-Coverage: 34%
-# Project Title
+Coverage: 40.7%
+# QA Project - Invetory Management System.
 
-One Paragraph of project description goes here
+The projects goal is to build an Invetory Management System for a game store using the CRUD database methods, allowing end users to CREATE, READ, UPDATE and DELETE records from a database.
+This will be achived by the use of Eclipse for our IDE, GitHub for our repository management, Jenkins as our CI server (using codes pushed from github), and lastely SonarQube for code quality and testing (pushed from jenkins).
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+End user will need to first donload repository to local client
+using appropriate IDE link to desired MySQL Database by editing ip address in each DaO file and IMS file.
 
 ### Prerequisites
 
@@ -74,7 +76,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Safwan Akhtar** - [Safwan-QA](https://github.com/Safwan-Akhtar) - 
 
 ## License
 
@@ -84,7 +86,8 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+[Chris Perrins](https://github.com/christophperrins) - Provided a basis for the project
+
+[Nicholas Johnsonh](https://github.com/nickrstewarttds) - Provided constant advice and help with syntax errors and code issues
+
 # ims-demo-test
